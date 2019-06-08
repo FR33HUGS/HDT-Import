@@ -15,6 +15,8 @@ Instructions:
 
 3.  Run HDT Import.exe
 
+Note:  "hdtd.bmp" & "hdtd2.bmp" MUST be in the same directory as "HDT Import.exe"
+
 ------------------------------------------------------------------
 
 Menu:
