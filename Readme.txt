@@ -24,13 +24,13 @@ Menu:
 Modes To Import -
 HDT Import will only import checked game modes.
 
-**This will import any matches not previously imported by HDT Import, but HDT import does not (as of yet) check HDT for matches already recorded by HDT itself (i.e. not entered by HDT import.) This means, these matches will have duplicates which will need to be deleted after HDT Import runs, but this will only happen once, as HDT Import will remembers the games it imports and won't import them a second time.
-
 Note:
 This note will be entered into the "note" field when importing games.
 
 Import:
 Starts importing.  HDT Import will remember games which it has already imported and not enter them again, unless you click "Clear History" first.
+
+**This will import any matches not previously imported by HDT Import, but HDT import does not (as of yet) check HDT for matches already recorded by HDT itself (i.e. not entered by HDT import.) This means, these matches will have duplicates which will need to be deleted after HDT Import runs, but this will only happen once, as HDT Import will remembers the games it imports and won't import them a second time.
 
 Clear History:
 This will delete the GamesHistory.txt file, allowing HDT Import to import games previously imported to HDT.  
