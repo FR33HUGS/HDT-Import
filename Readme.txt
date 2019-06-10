@@ -1,9 +1,15 @@
-HDT Import v1.0.0
+HDT Import v1.3
+
+HDT Import is a simple AHK script which parses the info from https://hsreplay.net/games/mine/, then enters it into Hearthstone Deck Tracker.
+
+The main reason for me writing this was to create a quick way to enter matches saved to HSReplay from the mobile app "Arcane Tracker" into HDT, so that I could see all my matches and deck statistics together, as HDT and Arcane Tracker do not sync with each other. (not yet anyway)
+
+------------------------------------------------------------------
 
 Requirements:
 
 AHK: AutoHotkey,  https://www.autohotkey.com/
-Google Chrome
+Google Chrome (I wrote this for use with google chrome, if enough people ask for compatibility with another browser, I may add it in the future.)
 
 ------------------------------------------------------------------
 
@@ -13,7 +19,7 @@ Instructions:
 
 2.  Open Hearthstone Deck Tracker.
 
-3.  Run HDT Import.exe
+3.  Run "HDT Import.exe"
 
 Note:  "hdtd.bmp" & "hdtd2.bmp" MUST be in the same directory as "HDT Import.exe"
 
@@ -25,17 +31,10 @@ Modes To Import -
 HDT Import will only import checked game modes.
 
 Note:
-This note will be entered into the "note" field when importing games.
+This note will be entered into the "note" field when importing matches.
 
 Import:
-Starts importing.  HDT Import will remember games which it has already imported and not enter them again, unless you click "Clear History" first.
-
-**This will import any matches not previously imported by HDT Import, but HDT import does not (as of yet) check HDT for matches already recorded by HDT itself (i.e. not entered by HDT import.) This means, these matches will have duplicates which will need to be deleted after HDT Import runs, but this will only happen once, as HDT Import will remembers the games it imports and won't import them a second time.
-
-Clear History:
-This will delete the GamesHistory.txt file, allowing HDT Import to import games previously imported to HDT.  
-
-**This does not remove and match history form HDT, and running HDT Import again will create duplicate matched in HDT unless the previous ones were manually deleted.
+Starts importing.  HDT Import will check against any matches already in Hearthstone Deck Tracker and will not create duplicate entries.
 
 ------------------------------------------------------------------
 
@@ -48,7 +47,7 @@ Data imported by HDT Import:
 - Mode (Ranked, casual, brawl, etc.)
 - Rank
 - Duration
-- # of Turns
+- Number of Turns
 
 Data NOT imported by HDT Import: 
 (See "Notes" section below)
@@ -64,10 +63,10 @@ Data NOT imported by HDT Import:
 Notes:
 
 -Deck Names-
-HSReplay does not record your deck's name, and therefore it cannot be retrieved and entered by HDT Import.  The top deck listed in HDT for a given class will be chosen as the active deck when importing.  I have found it helpful to create a deck in HDT named "00" or similar for each class, making it easy to spot newly entered matches.  These matches can then be selected (using shift/ctrl + Lclick to select multiple) and moved to the proper active deck in HDT.  Note that HDT will need to be restarted before the new deck name shows in the "matches" window.
+HSReplay does not record your deck's name, and therefore it cannot be retrieved and entered by HDT Import.  The top deck listed in Hearthstone Deck Tracker for a given class will be chosen as the active deck when importing.  I have found it helpful to create a deck in Hearthstone Deck Tracker named "00" or similar for each class so it is the first in the list, making it easy to spot newly entered matches.  These matches can then be selected (using shift/ctrl + Lclick to select multiple) and moved to the proper deck in Hearthstone Deck Tracker.  Note that Hearthstone Deck Tracker will need to be restarted before the new deck name shows in the "Matches" window.
 
 -Coin card/Conceded/Format-
-Although HDT has field to enter this data when manually importing, HSReplays does not keep track of this info.  It would require actually watching the replay to obtain.  Which, while admitedly possible with AHK, is beyond the scope of this project, and would slow the import process down by a significant amount.
+Although Hearthstone Deck Tracker has fields to enter this data when manually importing, HSReplays does not keep track of this info.  It would require actually watching the replay to obtain.  Which, while admittedly possible with AHK, is beyond the scope of this project, and would slow the import process down by a significant amount.
 
 -Dates/times played-
-Although HSReplay does keep track of when games were played - HDT has no field to enter this info into when manually entering a match.  HDT automatically fills in the "Started" field with the date & time the match was manually entered.
+Although HSReplay does keep track of when games were played - Hearthstone Deck Tracker has no field to enter this info into when manually entering a match.  Hearthstone Deck Tracker automatically fills in the "Started" field with the date & time the match was manually entered.
