@@ -222,9 +222,6 @@ parseready := ""
 
 Loop, Parse, clipboard, `n
 {
-	If A_LoopField contains  HSReplay HSReplay.net
-		Break
-	
 	If parseready = 1
 		Goto ParseGames
 	
@@ -234,6 +231,11 @@ Loop, Parse, clipboard, `n
 	
 	ParseGames:
 	
+	If A_LoopField contains  PreviousNext
+		Break
+	Else If A_LoopField contains  HSReplay HSReplay.net
+		Break
+		
 	++gameline
 	
 	If gameline = 1
@@ -269,7 +271,15 @@ Loop, Parse, clipboard, `n
 		Loop, parse, A_LoopField, %A_Space%
 		{
 			If A_Index = 1
-				Continue
+			{	
+				If A_LoopField is integer
+				{
+					currentgame["rank"] := "25"
+					goto ParseGames
+				}
+				else
+					Continue
+			}
 			If A_Index = 2
 				currentgame["rank"] := Trim(A_LoopField,"`r")
 		}
