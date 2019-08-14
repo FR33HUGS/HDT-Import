@@ -1,4 +1,4 @@
-HDT Import v1.3
+HDT Import v1.6
 
 HDT Import is a simple AHK script which parses the info from https://hsreplay.net/games/mine/, then enters it into Hearthstone Deck Tracker.
 
@@ -19,9 +19,9 @@ Instructions:
 
 2.  Open Hearthstone Deck Tracker.
 
-3.  Run "HDT Import.exe"
+3.  In HDT:  Goto options > settings and uncheck "show news bar"
 
-Note:  "hdtd.bmp" & "hdtd2.bmp" MUST be in the same directory as "HDT Import.exe"
+4.  Run "HDT Import.exe"
 
 ------------------------------------------------------------------
 
