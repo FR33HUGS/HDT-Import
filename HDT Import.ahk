@@ -173,6 +173,7 @@ WinActivate, Hearthstone Deck Tracker
 WinWaitActive, Hearthstone Deck Tracker
 WinRestore, Hearthstone Deck Tracker
 WinMove, Hearthstone Deck Tracker, , , , 1469, 814
+/*
 ImageSearch, hdtx, hdty, 34, 43, 176, 208, *TransWhite *n2 hdtd.bmp
 	If ErrorLevel >=1
 		ImageSearch, hdtx, hdty, 34, 43, 176, 208, *TransWhite *n2 hdtd2.bmp
@@ -181,7 +182,11 @@ ImageSearch, hdtx, hdty, 34, 43, 176, 208, *TransWhite *n2 hdtd.bmp
 				MsgBox, ImageSearch Error`nHDT Import will exit
 				exitapp
 			}
-				
+*/				
+
+hdtx := 130
+hdty := 184
+
 hdtally := hdty-44
 mouseclick, left, 67, %hdtally%
 
@@ -200,7 +205,8 @@ IfWinNotExist, Stats
 	WinRestore, Stats
 	WinActivate, Stats
 	WinWaitActive, Stats
-	Click 66, 232
+	Send {down}
+	;Click 66, 232
 	Sleep, 250
 }
 
